@@ -1,8 +1,8 @@
 
 let carrinho = document.getElementById('lista-produtos');
-carrinho.innerHTML='';
 let total = 0;
-document.getElementById('valor-total').textContent = `R$ 0`;
+limpar();
+
 function adicionar(){
 // Caputurar informação do site
     let produto = document.getElementById('produto').value;
@@ -20,4 +20,9 @@ function adicionar(){
     let campoTotal = document.getElementById('valor-total');
     campoTotal.textContent = `R$${total}`;
 
+}
+
+function limpar(){
+    carrinho.innerHTML='';
+    document.getElementById('valor-total').textContent = `R$ 0`;
 }
